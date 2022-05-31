@@ -10,7 +10,7 @@ public class Main {
             gui.showMainMenu();
             switch (scanner.nextLine()){
                 case "1":
-                    gui.showListOfBooks(db.books);
+                    gui.showListOfBooks(db.publications);
                     break;
                 case"2":
                     System.out.println("Podaj numer ISBN: ");

@@ -5,15 +5,16 @@ public class GUI {
         System.out.println("3. Zakończ");
     }
 
-    void showListOfBooks(Book[] books){
-        for (Book book : books){
-            System.out.println("Autor: " + book.getAuthor() +
-                             ", Tytuł: " + book.getTitle() +
-                             ", ISBN: " + book.getISBN() +
-                             ", Data wydania: " + book.getRelease() +
-                             ", Ilość stron: " + book.getPageNumber() +
-                             ", Wydawnictwo: " + book.getPublishingHouse() +
-                             ", Ilość sztuk: " + book.getCount());
+    void showListOfBooks(Publication[] pub){
+        for (Publication publ : pub){
+            System.out.println("Autor: " + publ.getAuthor() +
+                             ", Tytuł: " + publ.getTitle() +
+                             ", ISBN: " + publ.getISBN() +
+                             ", Data wydania: " + publ.getRelease() +
+                             ", Ilość stron: " + publ.getPageNumber() +
+                             ", Wydawnictwo: " + publ.getPublishingHouse() +
+                             ", Ilość sztuk: " + publ.getCount() +
+                             ", Rozmiar pliku: " + );
 
         }
     }
