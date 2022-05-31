@@ -15,9 +15,9 @@ public class DataBase {
         for (Book book : books) {
             if (book.getISBN().equals(isbn)) {
                 countOfBuy = book.getCount() - count;
+                book.setCount(countOfBuy);
             }
         }
-        System.out.println(countOfBuy);
         return countOfBuy;
     }
 }

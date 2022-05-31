@@ -32,7 +32,7 @@ public class Book {
 
     public int getCount() {return count;}
 
-    public void setCount() {
+    public void setCount(int count) {
         this.count = count;
     }
 

@@ -6,29 +6,31 @@ public class Main {
         DataBase db = new DataBase();
         Scanner scanner = new Scanner(System.in);
 
-        gui.showMainMenu();
-
         while(true){
+            gui.showMainMenu();
             switch (scanner.nextLine()){
                 case "1":
                     gui.showListOfBooks(db.books);
                     break;
                 case"2":
                     System.out.println("Podaj numer ISBN: ");
-                    System.out.print("Podaj ilość książek: ");
-                    db.buyABook(getString(), getInt());
-                    gui.showListOfBooks(db.books);
+                    String isbn = getString();
+                    System.out.println("Podaj ilość: ");
+                    int countOfBook = getInt();
+                    db.buyABook(isbn, countOfBook);
+                    break;
                 case "3":
                     System.exit(0);
                     break;
-        }
+                default:
+                    break;
+            }
         }
 
     }
     public static String getString() {
         return new Scanner(System.in).next();
     }
-
     public static int getInt() {
         return new Scanner(System.in).nextInt();
     }
