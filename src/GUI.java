@@ -14,7 +14,7 @@ public class GUI {
                              ", Ilość stron: " + publ.getPageNumber() +
                              ", Wydawnictwo: " + publ.getPublishingHouse() +
                              ", Ilość sztuk: " + publ.getCount() +
-                             ", Rozmiar pliku: " + );
+                             ", Rozmiar pliku: " + publ.getSizeOfPdf());
 
         }
     }

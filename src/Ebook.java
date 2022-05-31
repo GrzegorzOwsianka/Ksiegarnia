@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class Ebook extends Publication{
     private String sizeOfPdf;
 
@@ -12,10 +10,12 @@ public class Ebook extends Publication{
     }
 
     public String getSizeOfPdf() {
+        super.getSizeOfPdf();
         return sizeOfPdf;
     }
 
     public void setSizeOfPdf(String sizeOfPdf) {
+        super.setSizeOfPdf(sizeOfPdf);
         this.sizeOfPdf = sizeOfPdf;
     }
 }

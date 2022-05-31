@@ -77,4 +77,12 @@ public class Publication {
     public void setCount(int count) {
         this.count = count;
     }
+
+    public String getSizeOfPdf() {
+        return null;
+    }
+
+    public void setSizeOfPdf(String sizeOfPdf) {
+        sizeOfPdf = this.getSizeOfPdf();
+    }
 }
