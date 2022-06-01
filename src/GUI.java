@@ -5,7 +5,7 @@ public class GUI {
         System.out.println("3. Zakończ");
     }
 
-    void showListOfBooks(Publication[] pub){
+    /*void showListOfBooks(Publication[] pub){
         for (Publication publ : pub){
             System.out.println("Autor: " + publ.getAuthor() +
                              ", Tytuł: " + publ.getTitle() +
@@ -16,6 +16,12 @@ public class GUI {
                              ", Ilość sztuk: " + publ.getCount() +
                              ", Rozmiar pliku: " + publ.getSizeOfPdf());
 
+
+        }
+    }*/
+    void listOfPublication(){
+        for(Publication publications : DataBase.getInstance().getPublications()){
+            System.out.println(publications.toString());
         }
     }
 }

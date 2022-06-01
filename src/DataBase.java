@@ -1,5 +1,6 @@
 public class DataBase {
-    Publication[] publications = new Publication[6];
+    private final Publication[] publications = new Publication[6];
+    private static final DataBase instance = new DataBase();
     private int countOfBuy;
 
     public DataBase() {
@@ -20,5 +21,13 @@ public class DataBase {
             }
         }
         return countOfBuy;
+    }
+
+    public Publication[] getPublications() {
+        return publications;
+    }
+
+    public static DataBase getInstance() {
+        return instance;
     }
 }

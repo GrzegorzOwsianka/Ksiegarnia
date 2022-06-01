@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         GUI gui = new GUI();
-        DataBase db = new DataBase();
+        DataBase db = DataBase.getInstance();
         Scanner scanner = new Scanner(System.in);
 
         while(true){
             gui.showMainMenu();
             switch (scanner.nextLine()){
                 case "1":
-                    gui.showListOfBooks(db.publications);
+                    gui.listOfPublication();
                     break;
                 case"2":
                     System.out.println("Podaj numer ISBN: ");
