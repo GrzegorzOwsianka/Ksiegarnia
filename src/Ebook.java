@@ -1,4 +1,4 @@
-public class Ebook extends Publication{
+public class Ebook extends Book{
     private String sizeOfPdf;
 
     public Ebook() {
@@ -9,7 +9,6 @@ public class Ebook extends Publication{
         super(author, title, ISBN, year, month, day, pageNumber, publishingHouse, count);
         this.sizeOfPdf = sizeOfPdf;
     }
-
 
     public String getSizeOfPdf() {
         return sizeOfPdf;
@@ -22,8 +21,13 @@ public class Ebook extends Publication{
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(super.toString() + ", Rozmiar pliku PDF:")
-                .append(this.getSizeOfPdf());
+        if (getCount() > 0){
+            sb.append(super.toString() + ", Rozmiar pliku PDF:")
+                    .append(this.getSizeOfPdf());
+            return sb.toString();
+        } else {
+            sb.append(super.toString());
+        }
         return sb.toString();
     }
 }

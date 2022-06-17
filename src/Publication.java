@@ -81,14 +81,20 @@ public class Publication {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Autor:" + this.getAuthor())
-                .append(", Tytuł:")
-                .append(this.getTitle() + ", ISBN:")
-                .append(this.getISBN() + ", Wydawnictwo:")
-                .append(this.getPublishingHouse() + ", Ilość stron:")
-                .append(this.getPageNumber() + ", Data wydania:")
-                .append(this.getRelease() + ", Dostępna ilość:")
-                .append(this.getCount());
+        if (count > 0) {
+            sb.append("Autor:" + this.getAuthor())
+                    .append(", Tytuł:")
+                    .append(this.getTitle() + ", ISBN:")
+                    .append(this.getISBN() + ", Wydawnictwo:")
+                    .append(this.getPublishingHouse() + ", Ilość stron:")
+                    .append(this.getPageNumber() + ", Data wydania:")
+                    .append(this.getRelease() + ", Dostępna ilość:")
+                    .append(this.getCount());
+        } else {
+            sb.append("Autor:" + this.getAuthor())
+                    .append(", Tytuł:")
+                    .append(this.getTitle() + " UWAGA: Chwilowo brak produktu");
+        }
         return sb.toString();
     }
 }
