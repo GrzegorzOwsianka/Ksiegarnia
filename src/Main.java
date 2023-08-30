@@ -8,26 +8,22 @@ public class Main {
 
         while(true){
             gui.showMainMenu();
-            switch (scanner.nextLine()){
-                case "1":
-                    gui.listOfPublication();
-                    break;
-                case"2":
+            switch (scanner.nextLine()) {
+                case "1" -> gui.listOfPublication();
+                case "2" -> {
                     System.out.println("Podaj numer ISBN: ");
                     String isbn = getString();
-                    if(!db.IsISBN(isbn)){
+                    if (!db.IsISBN(isbn)) {
                         System.out.println("Nie ma takiego ISBN");
                     } else {
                         System.out.println("Podaj ilość: ");
                         int number = getInt();
                         db.buyABook(isbn, number);
                     }
-                    break;
-                case "3":
-                    System.exit(0);
-                    break;
-                default:
-                    break;
+                }
+                case "3" -> System.exit(0);
+                default -> {
+                }
             }
         }
 
